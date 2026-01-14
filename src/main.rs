@@ -7,7 +7,7 @@ mod cmd;
 mod web;
 pub(crate) mod cli;
 
-fn main() {
+fn main() -> Result<(), Box<dyn std::error::Error>>{
     let cli  = Cli::parse();
     match &cli.num {
         Some(x) => import(x),
