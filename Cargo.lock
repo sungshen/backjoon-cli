@@ -53,13 +53,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "backjoon-cli"
-version = "0.1.0"
-dependencies = [
- "clap",
-]
-
-[[package]]
 name = "clap"
 version = "4.5.54"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -130,6 +123,13 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "535d180e0ecab6268a3e718bb9fd44db66bbbc256257165fc699dadf70d16fe7"
 dependencies = [
  "unicode-ident",
+]
+
+[[package]]
+name = "ps"
+version = "0.1.0"
+dependencies = [
+ "clap",
 ]
 
 [[package]]

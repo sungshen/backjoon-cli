@@ -1,11 +1,17 @@
+use crate::web::import::import;
+use crate::cmd::option;
+use crate::cli::Cli;
 use clap::Parser;
 
-#[derive(Parser)]
-struct Cli {
-    num: i32,
-}
+mod cmd;
+mod web;
+pub(crate) mod cli;
 
 fn main() {
     let cli  = Cli::parse();
+    match &cli.num {
+        Some(x) => import(x),
+        None =>  option(&cli.commands),
+    }
 }
 
